@@ -1,0 +1,295 @@
+.imagemapmenu {
+    background: @primary-color;
+    .menu-container {
+        .responsive-large;
+        .responsive-medium;
+        .responsive-small;
+    }
+
+    .menu-title,
+    .menu-body {
+        color: @inverted-foreground-color;
+        margin-bottom: @menu-title-padding-bottom;
+        display: none;
+    }
+
+    .menu-container-inner {
+        padding: 20px;
+    }
+
+    .imagemapmenu-container-inner {
+        position: relative;
+    }
+
+    .imagemapmenu-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.6);
+        display: none;
+        z-index: 10;
+        &.show {
+            display: block;
+        }
+    }
+
+    .imagemapmenu-container-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        @media all and (max-width: 899px) {
+            display: none;
+        }
+    }
+
+    .imagemapmenu-items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 500;
+        @media all and (max-width: 899px) {
+            position: static;
+            margin-top: 20px;
+        }
+    }
+
+    .menu-item {
+        position: static;
+        @media all and (max-width:899px) {
+			width: 50%;
+			float:left;
+			&.nth-child-odd {
+				.menu-item-inner {
+					margin-right: 10px;
+				}
+			}
+
+			&.nth-child-even {
+				.menu-item-inner {
+					margin-left: 10px;
+				}
+			}
+		}
+    }
+
+    .overview {
+        left: 42.5%;
+        top: 34%;
+        .menu-item-hotspot {
+            left: 42.5%;
+            top: 34%;
+        }
+    }
+
+    .module-one {
+        left: 9%;
+        top: 58%;
+        .menu-item-hotspot {
+            left: 9%;
+            top: 58%;
+        }
+    }
+
+    .module-two {
+        left: 43.5%;
+        top: 72%;
+        .menu-item-hotspot {
+            left: 43.5%;
+            top: 72%;
+        }
+    }
+
+    .module-three {
+        left: 80%;
+        top: 46%;
+        .menu-item-hotspot {
+            left: 80%;
+            top: 46%;
+        }
+    }
+
+    .module-four {
+        left: 16%;
+        top: 85%;
+        .menu-item-hotspot {
+            left: 16%;
+            top: 85%;
+        }
+    }
+
+    .module-five {
+        left: 71%;
+        top: 87%;
+        .menu-item-hotspot {
+            left: 71%;
+            top: 87%;
+        }
+    }
+
+    .menu-item-hotspot {
+        position: absolute;
+        display: block;
+        width: auto;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+        padding: 10px 20px;
+        border-radius: 50px;
+        .no-touch & {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+        @media all and (max-width:899px) {
+            display: none;
+        }
+    }
+
+    .menu-item-inner {
+        display: none;
+        position: absolute!important;
+        margin: 0px;
+        padding-bottom: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &.show-item {
+            display: block;
+        }
+        @media all and (max-width:899px) {
+            display: block;
+            position: relative!important;
+            margin: 0px;
+            padding-bottom: 20px;
+            top: 0;
+            left: 0;
+            transform: none;
+            width: auto;
+        }
+    }
+
+    .menu-item-inner.disabled {
+        cursor: not-allowed;
+        opacity: .5;
+    }
+
+    .menu-item-done {
+        color: @primary-color;
+        float: right;
+        padding: 10px 10px 0 0;
+        .no-touch & {
+            &:hover {
+                color: @secondary-color;
+            }
+        }
+        @media all and (max-width:899px) {
+            display: none;
+        }
+    }
+
+    .menu-item-title {
+        padding: @menu-body-padding;
+    }
+
+    .menu-item-body {
+        padding: @menu-body-padding;
+    }
+
+    .menu-item-button {
+        padding: @menu-body-padding;
+
+        a {
+            font-family: @font-family;
+            background-color: @button-color;
+            color: @button-text-color;
+            padding: @button-padding-top (@button-padding-right*2) @button-padding-bottom (@button-padding-left*2);
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            border: @button-border;
+            border-radius: 50px;
+
+            .transition-all-colors;
+            .button-text;
+
+            .no-touch &:hover {
+                background-color: @button-color-hover;
+                color: @button-text-color-hover;
+                border-color: @button-border-color-hover;
+            }
+
+            &.visited {
+                background-color: @button-color-disabled!important;
+                border-color: @button-border-color-disabled!important;
+                color: @button-text-color-disabled!important;
+            }
+        }
+    }
+
+    .menu-item-duration {
+        float: right;
+    }
+}
+
+
+
+@media all and (max-width:760px) {
+    .menu-title-inner {
+        padding: 15px 0 0;
+    }
+
+    .menu-body-inner {
+        padding: 0px 0 10px;
+    }
+
+    .imagemapmenu {
+
+        .menu-inner {
+            padding: 0;
+            position: relative!important;
+            top: 0;
+            left: 0;
+            transform: auto;
+        }
+
+        .menu-item {
+            .responsive-medium;
+            .responsive-small;
+            width: 50%;
+            float: left;
+            .dir-rtl & {
+                float: right;
+            }
+            margin-top:@menu-body-padding-bottom;
+            margin-bottom:20px;
+
+
+            &.nth-child-even {
+                .menu-item-inner {
+                    margin-left: 5%;
+                    .dir-rtl & {
+                        margin-left: inherit;
+                        margin-right: 5%;
+                    }
+                }
+            }
+
+            &.nth-child-odd {
+                clear: both;
+
+                .menu-item-inner {
+                    margin-right: 5%;
+                    .dir-rtl & {
+                        margin-right: inherit;
+                        margin-left: 5%;
+                    }
+                }
+            }
+        }
+    }
+}

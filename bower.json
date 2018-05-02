@@ -1,0 +1,17 @@
+{
+  "name": "adapt-imagemap-menu",
+  "version": "0.77",
+  "framework": ">=2.1",
+  "homepage": "",
+  "issues": "",
+  "displayName": "Image Map menu",
+  "menu": "imagemap-menu",
+  "description": "An image map menu",
+  "main": "js/adapt-imagemap-menu.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-menu"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_imageMapMenu"
+}

@@ -1,0 +1,19 @@
+<a href="#" class="menu-item-hotspot {{#if _isVisited}}visited{{/if}} {{#if _isComplete}}complete{{/if}}" data-id="{{_id}}">{{{title}}}</a>
+
+<div class="menu-item-inner{{#if _locked}} disabled{{/if}}">
+	<a href="#" class="menu-item-done icon icon-cross"></a>
+	<div class="menu-item-title">
+		<h5 class="menu-item-title-inner">{{{displayTitle}}}</h5>
+	</div>
+	<div class="menu-item-body">
+		<div class="menu-item-body-inner">{{{body}}}</div>
+	</div>
+	<div class="menu-item-button">
+		{{#unless _locked}}
+			<a href="#/id/{{_id}}" class="{{#if _isVisited}}visited{{/if}}">
+				{{{linkText}}}
+			</a>
+		{{/unless}}
+		<span class="menu-item-duration">{{{duration}}}</span>
+	</div>
+</div>
